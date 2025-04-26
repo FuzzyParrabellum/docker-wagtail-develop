@@ -25,6 +25,13 @@ docker compose build
 
 It can take a while (typically 15-20 minutes) to fetch and build all dependencies and containers.
 
+When it comes to Windows users, you might run into an error concerning the `COPY ./libs/Willow /code/willow/` line of your Dockerfile. The libs directory and the Willow library might not be automatically installed with the previous steps of this README, you would then have to enter these lines to do it manually:
+```sh
+mkdir libs
+cd libs
+git clone https://github.com/wagtail/Willow.git
+```
+
 Here is the resulting folder structure:
 
 ```sh
